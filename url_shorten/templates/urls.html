@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Shorten Url</title>
+</head>
+
+<body>
+   <div class="row">
+        <form  action="{% url 'short-url' %}" method="get">
+             {% csrf_token %}
+            <input type="text" value="" id="url" name="short_url" />
+            <input type="submit" value="Shorten Url" />
+        </form>
+        <div>
+            <label>Short Url : <a href="{{url}}" target="_blank">{{short_url}}</a></label>
+        </div>
+    </div>
+</body>
+
+</html>
